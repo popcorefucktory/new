@@ -1,0 +1,17 @@
+C:\Users\kivyanskaya\Documents\Visual Studio 2015\Projects\MyTest\MyTest\bin\x64\Debug\MyTest.dll
+C:\Users\kivyanskaya\Documents\Visual Studio 2015\Projects\MyTest\MyTest\bin\x64\Debug\MyTest.pdb
+C:\Users\kivyanskaya\Documents\Visual Studio 2015\Projects\MyTest\MyTest\bin\x64\Debug\appium-dotnet-driver.dll
+C:\Users\kivyanskaya\Documents\Visual Studio 2015\Projects\MyTest\MyTest\bin\x64\Debug\Castle.Core.dll
+C:\Users\kivyanskaya\Documents\Visual Studio 2015\Projects\MyTest\MyTest\bin\x64\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\kivyanskaya\Documents\Visual Studio 2015\Projects\MyTest\MyTest\bin\x64\Debug\Newtonsoft.Json.dll
+C:\Users\kivyanskaya\Documents\Visual Studio 2015\Projects\MyTest\MyTest\bin\x64\Debug\WebDriver.dll
+C:\Users\kivyanskaya\Documents\Visual Studio 2015\Projects\MyTest\MyTest\bin\x64\Debug\WebDriver.Support.dll
+C:\Users\kivyanskaya\Documents\Visual Studio 2015\Projects\MyTest\MyTest\bin\x64\Debug\appium-dotnet-driver.xml
+C:\Users\kivyanskaya\Documents\Visual Studio 2015\Projects\MyTest\MyTest\bin\x64\Debug\Castle.Core.xml
+C:\Users\kivyanskaya\Documents\Visual Studio 2015\Projects\MyTest\MyTest\bin\x64\Debug\Newtonsoft.Json.xml
+C:\Users\kivyanskaya\Documents\Visual Studio 2015\Projects\MyTest\MyTest\bin\x64\Debug\WebDriver.xml
+C:\Users\kivyanskaya\Documents\Visual Studio 2015\Projects\MyTest\MyTest\bin\x64\Debug\WebDriver.Support.xml
+C:\Users\kivyanskaya\Documents\Visual Studio 2015\Projects\MyTest\MyTest\bin\x64\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\kivyanskaya\Documents\Visual Studio 2015\Projects\MyTest\MyTest\obj\x64\Debug\MyTest.csprojResolveAssemblyReference.cache
+C:\Users\kivyanskaya\Documents\Visual Studio 2015\Projects\MyTest\MyTest\obj\x64\Debug\MyTest.dll
+C:\Users\kivyanskaya\Documents\Visual Studio 2015\Projects\MyTest\MyTest\obj\x64\Debug\MyTest.pdb
