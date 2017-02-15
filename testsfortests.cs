@@ -54,23 +54,7 @@ namespace TestProjectNew
             _session.FindElementByName("Да").Click();
         }
 
-
-        [TestMethod]
-        public void OpenMailcatcher()
-        {
-
-            ChromeDriver openMailCatcher = new ChromeDriver();
-            openMailCatcher.Url = "http://controller.kivyanskaya.notkube.v.netstream.ru:1080/";
-            openMailCatcher.Navigate();
-
-            openMailCatcher.FindElementByXPath("//*[@id='messages']/table/tbody/tr/td[2]").Click();
-            //openMailCatcher.FindElementByXPath("//*[@id='message']/header/nav/ul/li[4]/a/span").Click();
-            //var key = openMailCatcher.FindElementById("/html/body/table/tbody/tr/td[2]").Text;
-            //Console.WriteLine(key);
-            var iframe = openMailCatcher.SwitchTo().Frame(openMailCatcher.FindElementByXPath("//*[@id='message']/iframe"));
-            var key = openMailCatcher.FindElementByXPath("/html/body").Text;
-            Console.WriteLine(key);
-        }
+        
 
         [TestMethod]
         public void IfLanding()
