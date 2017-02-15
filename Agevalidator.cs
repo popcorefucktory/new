@@ -3,7 +3,9 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Appium.Windows;
 using OpenQA.Selenium.Remote;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading;
 using TestProjectNew.Actions;
 
@@ -71,11 +73,21 @@ namespace TestProjectNew
             Thread.Sleep(1500);
             Debug.WriteLine("Get_ageValidatorpopup");
 
-            var a = _session.FindElementByClassName("Button");
-            a.SendKeys(Keys.Tab);
-            a.SendKeys(Keys.Enter);
-
+           
+           
             
+            //с кодом ниже работает, если в попае текст с "да", следовательно не может найти вторую кнопку с тектом нет
+            //var b1 = _session.FindElementByClassName("Button");
+            //b1.FindElement(By.Name("Да, я подтверждаю, мне 18 или более лет")).Click();
+
+            //var a =_session.FindElementsById("ContentScrollViewer");
+            //var b = _session.FindElementByClassName("TextBlock");
+            //b.FindElement(By.Name("Нет, мне менее 18 лет")).Click();
+
+
+            //var a = _session.FindElementByClassName("Button");
+            //a.SendKeys(Keys.Tab);
+
 
             //_session.FindElementByXPath("//Button[contains[@ClassName='Button' and @id='iamnot18']]");
 
