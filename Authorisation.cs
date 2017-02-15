@@ -150,22 +150,8 @@ namespace TestProjectNew
             _session.FindElementByClassName("Button").Click();
             _session.FindElementByName("OK").Click();
 
-            ChromeDriver openMailCatcher = new ChromeDriver();
-            openMailCatcher.Url = "http://controller.kivyanskaya.notkube.v.netstream.ru:1080/";
-            openMailCatcher.Navigate();
-
-            openMailCatcher.FindElementByXPath("//*[@id='messages']/table/tbody/tr/td[2]").Click();
-            var iframe = openMailCatcher.SwitchTo().Frame(openMailCatcher.FindElementByXPath("//*[@id='message']/iframe"));
-            var key = openMailCatcher.FindElementByXPath("/html/body").Text;
-            //Console.WriteLine(key);
-            _session.FindElementByClassName("TextBlock").SendKeys(key);
-            _session.FindElementByName("Войти").SendKeys(Keys.Enter);
-            _session.FindElementByClassName("Button").SendKeys(Keys.Enter);
-            Thread.Sleep(3000);
-
-            var mainTheme = _session.FindElementByClassName("ListView");
-
-            Assert.IsNotNull(mainTheme);
+            Phone_MailCatcherActions.OpenMailcatcher(_session);
+            
         }
         [TestMethod]
         public void AuthorisationPhoneFail()
