@@ -143,6 +143,8 @@ namespace TestProjectNew
         [TestMethod]
         public void AuthorisationPhoneSuccess()
         {
+           
+            //LogoutActions.LogoutAction(_session);
             NavigationActions.OpenMyIvi(_session);
 
             _session.FindElementByClassName("TextBox").Clear();
