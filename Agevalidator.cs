@@ -71,6 +71,12 @@ namespace TestProjectNew
             Thread.Sleep(1500);
             Debug.WriteLine("Get_ageValidatorpopup");
 
+            var a = _session.FindElementByClassName("Button");
+            a.SendKeys(Keys.Tab);
+            a.SendKeys(Keys.Enter);
+
+            
+
             //_session.FindElementByXPath("//Button[contains[@ClassName='Button' and @id='iamnot18']]");
 
             //IWebElement a = _session.FindElementByAccessibilityId("iamnot18") as WindowsElement;

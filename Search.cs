@@ -1,10 +1,7 @@
-﻿using OpenQA.Selenium.Support;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Newtonsoft.Json.Linq;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Remote;
 using System;
-using System.Threading;
 using TestProjectNew.Actions;
 
 
@@ -93,8 +90,8 @@ namespace TestProjectNew
             Assert.IsNotNull(text);
             Assert.IsNotNull(text2);
         }
-
        
+
     }
 }
     
