@@ -5,6 +5,7 @@ using OpenQA.Selenium.Remote;
 using System;
 using System.Diagnostics;
 using System.Threading;
+using TestProjectNew.Actions;
 
 namespace TestProjectNew
 
@@ -20,46 +21,27 @@ namespace TestProjectNew
         protected static string OriginalIviMode;
 
         [ClassInitialize]
-
         public static void Setup(TestContext context)
-
         {
-            //launch the app
-            DesiredCapabilities appCapabilities = new DesiredCapabilities();
-            appCapabilities.SetCapability("app", "ivi.ru.ivi-xbox_17t6d7vatm0nm!App");
-            appCapabilities.SetCapability("platformName", "Windows");
-            appCapabilities.SetCapability("deviceName", "WindowsPC");
-            IviSession = new RemoteWebDriver(new Uri(WindowsApplicationDriverUrl), appCapabilities);
-            Assert.IsNotNull(IviSession);
-            IviSession.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(2));
-
-            //IviSession.FindElementByName("//Button[starts-with(@Name, \"ListViewItem-14\")]").Click();
-            //Assert.IsNotNull(IviResult);
+            _session = SetupActions.LaunchApp();
         }
-
 
         [ClassCleanup]
         public static void TearDown()
         {
-            IviResult = null;
-            IviSession.Dispose();
-            IviSession = null;
+            _session.Dispose();
+            _session = null;
         }
+
+
+        [TestMethod]
         public void Get_ageValidatorpopup()
         {
-            OpenTheSearch();
-            _session.FindElementByClassName("TextBlock").SendKeys("Убить Билла");
-            _session.FindElementByClassName("TextBlock").SendKeys(Keys.Tab);
-            _session.FindElementByClassName("Button").SendKeys(Keys.Enter);
+            OpenContent18Actions.Open18(_session);
             var popup = _session.FindElementByClassName("TextBlock").Text;
             Console.WriteLine(popup);
 
             Assert.IsNotNull(popup);
-        }
-
-        private void OpenTheSearch()
-        {
-            throw new NotImplementedException();
         }
 
         [TestMethod]
@@ -88,6 +70,8 @@ namespace TestProjectNew
             Get_ageValidatorpopup();
             Thread.Sleep(1500);
             Debug.WriteLine("Get_ageValidatorpopup");
+
+            //_session.FindElementByXPath("//Button[contains[@ClassName='Button' and @id='iamnot18']]");
 
             //IWebElement a = _session.FindElementByAccessibilityId("iamnot18") as WindowsElement;
             //_session.FindElementByXPath("//*[@AutomationId='iamnot18']");
