@@ -6,9 +6,7 @@ using OpenQA.Selenium.Remote;
 using System;
 using System.Threading;
 using TestProjectNew.Actions;
-using System.Diagnostics;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium.Appium.Windows;
+
 
 namespace TestProjectNew
 {
@@ -96,57 +94,7 @@ namespace TestProjectNew
             Assert.IsNotNull(text2);
         }
 
-        [TestMethod]
-        public void Get_ageValidatorpopup()
-        {
-            OpenTheSearch();
-            _session.FindElementByClassName("TextBlock").SendKeys("Убить Билла");
-            _session.FindElementByClassName("TextBlock").SendKeys(Keys.Tab);
-            _session.FindElementByClassName("Button").SendKeys(Keys.Enter);
-            var popup = _session.FindElementByClassName("TextBlock").Text;
-            Console.WriteLine(popup);
-
-            Assert.IsNotNull(popup);
-        }
-
-        [TestMethod]
-        public void SayYes_ageValidatorpopup_IsHere()
-        {
-            Get_ageValidatorpopup();
-            var a = _session.FindElementByClassName("Button").Text;
-
-            Console.WriteLine(a);
-
-            Assert.IsNotNull(a);
-        }
-        [TestMethod]
-        public void SayYes_ageValidatorpopup_Click()
-        {
-            Get_ageValidatorpopup();
-            _session.FindElementByClassName("Button").Click();
-
-            //Assert.IsNotNull(дописать страницу);
-        }
-
-        [TestMethod]
-        public void SayNo_ageValidatorpopup()
-        {
-            Debug.WriteLine("start");
-            Get_ageValidatorpopup();
-            Thread.Sleep(1500);
-            Debug.WriteLine("Get_ageValidatorpopup");
-
-            IWebElement a = _session.FindElementByAccessibilityId("iamnot18") as WindowsElement;
-            //_session.FindElementByXPath("//*[@AutomationId='iamnot18']");
-            //var a = _session.FindElementsByClassName("Button");
-            //a.FindElementByXPath("//Button[@AutomationId=\"iamnot18\"]");
-            //_session.FindElementByXPath("//Button[@TextBlock='Нет, мне менее 18 лет' and @id='iamnot18']");
-
-            Debug.WriteLine("FindElementByXPath");
-            
-            Thread.Sleep(4000);
-
-        }
+       
     }
 }
     
