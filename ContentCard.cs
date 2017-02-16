@@ -1,11 +1,14 @@
-﻿using GalaSoft.MvvmLight;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium.Remote;
+using TestProjectNew.Actions;
+using OpenQA.Selenium;
 
 namespace TestProjectNew
 {
     [TestClass]
-    public class ContsntCard
+    public class ContentCard
+    {
+
         private static RemoteWebDriver _session;
 
         [ClassInitialize]
@@ -22,7 +25,37 @@ namespace TestProjectNew
         }
 
         [TestMethod]
-        public void ScrollDown()
+        public void AVODcard_new()
+        {
+
+        }
+
+        [TestMethod]
+        public void AVODcard_watched()
+        {
+
+        }
+
+        [TestMethod]
+        public void SVODcard_new()
+        {
+
+        }
+
+        [TestMethod]
+        public void SVODcard_watched()
+        {
+
+        }
+
+        [TestMethod]
+        public void TVOD_ESTcard_new()
+        {
+
+        }
+
+        [TestMethod]
+        public void TVOD_ESTcard_watched()
         {
 
         }
