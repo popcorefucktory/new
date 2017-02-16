@@ -56,8 +56,11 @@ namespace TestProjectNew
             _session.FindElementByClassName("Button").Click();
             _session.FindElementByClassName("TextBlock").SendKeys("1");
             _session.FindElementByClassName("Button").Click();
+            _session.FindElementByClassName("ScrollViewer").Click();
             _session.FindElementByClassName("Button").Click();
-            Thread.Sleep(2000);
+            var maintheme = _session.FindElementByClassName("ListView");
+
+            Assert.IsNotNull(maintheme);
 
             //Console.WriteLine(a);
 
