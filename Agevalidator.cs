@@ -65,7 +65,7 @@ namespace TestProjectNew
         }
 
         [TestMethod]
-        public void SayNo_ageValidatorpopup_fromSearch()
+        public void SayNo_ageValidatorpopup_fromTheSearch()
         {
             //Debug.WriteLine("start");
             Get_ageValidatorpopup();
