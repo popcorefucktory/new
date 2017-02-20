@@ -1,13 +1,12 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Appium.Windows;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Remote;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
 using System.Threading;
 using TestProjectNew.Actions;
+
 
 namespace TestProjectNew
 
@@ -66,41 +65,19 @@ namespace TestProjectNew
         }
 
         [TestMethod]
-        public void SayNo_ageValidatorpopup()
+        public void SayNo_ageValidatorpopup_fromSearch()
         {
-            Debug.WriteLine("start");
+            //Debug.WriteLine("start");
             Get_ageValidatorpopup();
-            Thread.Sleep(1500);
-            Debug.WriteLine("Get_ageValidatorpopup");
+            //Thread.Sleep(1500);нет
+            //Debug.WriteLine("Get_ageValidatorpopup");
 
-           
-           
-            
-            //с кодом ниже работает, если в попае текст с "да", следовательно не может найти вторую кнопку с тектом нет
-            //var b1 = _session.FindElementByClassName("Button");
-            //b1.FindElement(By.Name("Да, я подтверждаю, мне 18 или более лет")).Click();
+            var a = _session.FindElementsByClassName("Button");
+            Console.WriteLine(a[2]);
+            a[2].SendKeys(Keys.Enter);
+            var b = _session.FindElementByClassName("TextBlock");
 
-            //var a =_session.FindElementsById("ContentScrollViewer");
-            //var b = _session.FindElementByClassName("TextBlock");
-            //b.FindElement(By.Name("Нет, мне менее 18 лет")).Click();
-
-
-            //var a = _session.FindElementByClassName("Button");
-            //a.SendKeys(Keys.Tab);
-
-
-            //_session.FindElementByXPath("//Button[contains[@ClassName='Button' and @id='iamnot18']]");
-
-            //IWebElement a = _session.FindElementByAccessibilityId("iamnot18") as WindowsElement;
-            //_session.FindElementByXPath("//*[@AutomationId='iamnot18']");
-            //var a = _session.FindElementsByClassName("Button");
-            //a.FindElementByXPath("//Button[@AutomationId=\"iamnot18\"]");
-            //_session.FindElementByXPath("//Button[@TextBlock='Нет, мне менее 18 лет' and @id='iamnot18']");
-
-            Debug.WriteLine("FindElementByXPath");
-
-            Thread.Sleep(4000);
-
+            Assert.IsNotNull(b);
         }
     }
 }
