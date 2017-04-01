@@ -4,6 +4,9 @@ using System;
 using System.Threading;
 using TestProjectNew.Actions;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium;
+using System.Windows.Automation;
+
 
 namespace TestProjectNew
 
@@ -43,25 +46,32 @@ namespace TestProjectNew
         }
 
 
-
         [TestMethod]
-        public void Logout()
+        public void SearchById()
         {
-            _session.FindElementByName("Мой ivi").Click();
-            _session.FindElementByName("Профиль").Click();
-            _session.FindElementByName("Выйти").Click();
-            Thread.Sleep(3000);
-            _session.FindElementByName("Да").Click();
-        }
 
-        
+            _session.FindElementByName("blockbasters").Click();
 
-        [TestMethod]
-        public void IfLanding()
-        {
-            var a = _session.FindElementByName("ПОДКЛЮЧИТЕ ПРЕМИУМ-ПОДПИСКУ ivi+").Text;
-            Console.WriteLine(a);
-            Assert.IsNotNull(a);
+            //Thread.Sleep(2000);
+            //_session.FindElementByName("Мультики").Click();
+            //_session.FindElementByName("genre").Click();
+            //Thread.Sleep(4000);
+
+            
+            //WebElement a = _session.FindElementByXPath("//Input[@Name=\"Жанры\"]");
+            //var a = _session.FindElementsByName("Жанры").Count; <-не находит по классу, находит по name
+            //a.Click();
+           //a.GetAttribute();
+            //Console.WriteLine(a);
+            //_session.FindElementByXPath("//Button[@index=\"_genreButton\"]").Click();
+            //_session.FindElementByXPath("//input[@AutomationId =\"_genreButton\"]").Click();
+            //_session.FindElementByXPath("//input[@Name=\"Жанры\"]").Click();
+            //IWebElement a = _session.FindElementByXPath("//Button[@ClassName=\"TextBlock\"]//[@AutomationId=\"_genreButton\"]");
+            //IWebElement a = _session.FindElementByXPath("//Button[@Name=\"Жанры\"]//[@AutomationId=\"_genreButton\"]");
+            //IWebElement a = _session.FindElementByXPath("//Button[@AutomationId=\"_genreButton\"]");
+            //IWebElement a = _session.FindElementByXPath("//Button[@AutomationId=\"_genreButton\"]//ListItem[@IsSelected=\"True\"]");
+
+            //Thread.Sleep(2000);
 
         }
 
@@ -80,9 +90,12 @@ namespace TestProjectNew
         //    //builder.MoveToElement(c).Build().Perform();
         //    //Thread.Sleep(1000);
 
-        
-           
+
+
         //}
+
+   
+
     }
 }
 
