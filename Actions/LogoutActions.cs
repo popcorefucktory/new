@@ -1,6 +1,5 @@
 ﻿using OpenQA.Selenium.Remote;
 
-
 namespace TestProjectNew.Actions
 {
     public static class LogoutActions
