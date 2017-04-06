@@ -27,7 +27,7 @@ namespace TestProjectNew
 
 
         [TestMethod]
-        public void registrationByMail_success()
+        public void RegistrationByMail_success()
         {
             NavigationActions.OpenMyIvi(_session);
             _session.FindElementByName("Регистрация").Click();
@@ -43,7 +43,7 @@ namespace TestProjectNew
             _session.FindElementByClassName("ScrollViewer").Click();
             _session.FindElementByClassName("Button").Click();
 
-            var maintheme = _session.FindElementByClassName("ListView");
+            var maintheme = _session.FindElementByName("Мой ivi");
             Assert.IsNotNull(maintheme);
         }
 

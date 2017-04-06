@@ -25,7 +25,7 @@ namespace TestProjectNew
         }
 
         [TestMethod]
-        public void reg_by_num_suc()
+        public void Reg_by_num_suc()
 
         {
             NavigationActions.OpenMyIvi(_session);
